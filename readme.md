@@ -1,4 +1,4 @@
-Bookings System App
+# Booking-System APP
 
 A basic HTML, CSS template using Bootstrap and Django Form templating.
 
@@ -46,42 +46,27 @@ VS code setup. 
 		<br> - `python3 -m venv venv`
 		<br> - `source venv/bin/activate`
 
-3. Install Django in your virtual environment:
-		<br> - `pip install Django`
+3. Clone into Folder:
+		<br> - `git clone <this repo url>`
 
-4. Install Dependencies:
-		<br> - `pip install requirements.txt`
+4. change directory to project name:
+		<br> - `cd Booking-System`
 
-5. Create a new Django project:
-		<br> - `django-admin startproject myproject .`
+5. Install requirements:
+		<br> - `pip install -r requirements.txt`
 
-6. Create a new Django app within your project:
-		<br> - `python manage.py startapp myapp`
-
-7. Run the development server:
-		<br> - `python manage.py runserver`
-
-8. Create the database tables:
+6. Create the database tables:
 		<br> - `python manage.py makemigrations`
 		<br> - `python manage.py migrate`
 
-9. Create a superuser account:
-		<br> - `python manage.py createsuperuser`
-
-
-After you run these commands, you should have a new Django project set up and ready to go. You can start creating models, views, and templates to build your application.
-
- 
-Also, you can use the command django-admin startproject <project_name> to create a new project, and python manage.py startapp <app_name> to create a new app inside a project.
-
-10. Make migrations to make changes to apply changes to the database:
-		<br> - `python3 manage.py migrate`
-11. Then run Django server:
- 		<br> - `python3 manage.py runserver`
-
+7. Run the development server:
+		<br> - `python manage.py runserver`
+8. Open website at:
+		<br> - `http://127.0.0.1:8000/`
 
 ## Room for Improvement:
 * Add user Login with user Authentication.
 * Add background that complies with the requirements of the company or project at hand.
 * Email confirmation once the room is booked.
+
 
