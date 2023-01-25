@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+
+{% block content %}
+  <h1>Edit Reservation</h1>
+  <form method="post" action="{% url 'BookingsApp:reservation_edit' reservation.pk %}">
+      {% csrf_token %}
+            {{ form }}
+    <input type="submit" value="Save">
+  </form>
+{% endblock %}

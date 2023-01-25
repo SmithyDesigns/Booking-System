@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+  <h1 class="text-center my-5">Reservation List</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Reservation ID</th>
+        <th>Rental Name</th>
+        <th>Check-in</th>
+        <th>Check-out</th>
+        <th>Previous Reservation ID</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for reservation, previous_rent in reservations %}
+      <tr>
+        <td>{{ reservation.id }}</td>
+        <td>{{ reservation.rental.name }}</td>
+        <td>{{ reservation.checkin }}</td>
+        <td>{{ reservation.checkout }}</td>
+        <td>{{ previous_rent.id }}</td>
+        <td>
+          <a href="{% url 'BookingsApp:reservation_edit' reservation.pk %}" class="btn btn-primary mr-2">Edit</a>
+          <a href="{% url 'BookingsApp:reservation_delete' reservation.pk %}" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <div class="text-center my-5">
+    <a href="{% url 'BookingsApp:reservation_create' %}" class="btn btn-success">Create Reservation</a>
+  </div>
+{% endblock %}
